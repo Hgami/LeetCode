@@ -14,8 +14,42 @@ public class SquareAndSortArray {
 
 	public static void main(String[] args) {
 		
-		int[] nums = {-4,-1,0,3,10};
-	    sortedSquares(nums);
+//		int[] nums = {-4,-1,0,3,10};
+//	    sortedSquares(nums);
+	    
+	    
+        int arr[] = {6, 3, 4 , 5};
+        
+        segregateEvenOdd(arr);
+        
+        for (int i = 0; i < arr.length; i++)
+            System.out.print(arr[i]+" ");
+		
+	}
+
+	private static void segregateEvenOdd(int[] arr) {
+		int count = 0;
+		/* Initialize left and right indexes */
+        int left = 0, right = arr.length - 1;
+        while (left < right){
+            /* Increment left index while we see 0 at left */
+            while (arr[left]%2 == 0 && left < right)
+                left++;
+ 
+            /* Decrement right index while we see 1 at right */
+            while (arr[right]%2 == 1 && left < right)
+                right--;
+ 
+            if (left < right)
+            {
+                /* Swap arr[left] and arr[right]*/
+                left++;
+                right--;
+                count+=1;
+            }
+            
+        }
+        System.out.println(count);
 		
 	}
 

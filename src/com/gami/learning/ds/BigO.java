@@ -25,8 +25,7 @@ public class BigO {
 		 *
 		 *
 		 */
-		
-
+	
 		
 		 BigOof1(numbers);
 		 BigOofN(numbers,names);
@@ -34,9 +33,6 @@ public class BigO {
 
 	}
 	
-
-
-
 	public static void BigOof1(int[] numbers) {
 		
 		/* Complexity is O(1) Big O of 1  --> tht is constant time. 
